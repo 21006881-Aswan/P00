@@ -53,6 +53,7 @@ public class CalculatorTest {
 		int expected=1234;
 		assertEquals(expected,actual);
 	}
+	//
 	@Test
 	public final void testDivide() {
 		int a=9874;
@@ -75,11 +76,15 @@ public class CalculatorTest {
 	
 	@Test
 	public void testDivideByZero() {
+		try {
 		int a=4321;
 		int b=0;
 		Calculator cal=new Calculator();
-		
 		int actual=cal.divide(a, b);
-		fail("Error");
+		
+		}
+		catch(Exception x) {
+		System.out.println("Error");
+		}
 	}
 }
